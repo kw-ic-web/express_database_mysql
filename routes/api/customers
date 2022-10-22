@@ -11,3 +11,8 @@ router.get("/api/customers/insert", async (req, res) => {
   const customers = await mysql.query("customerInsert", req.body.param);
   res.send(customers);
 });
+
+router.get("/api/customers/update", async (req, res) => {
+  const customers = await mysql.query("customerUpdate", req.body.param);
+  res.send(result);
+});
