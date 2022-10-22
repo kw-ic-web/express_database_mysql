@@ -7,12 +7,12 @@ router.get("/api/customers", async (req, res) => {
   res.send(customers);
 });
 
-router.get("/api/customers/insert", async (req, res) => {
+router.post("/api/customers/insert", async (req, res) => {
   const result = await mysql.query("customerInsert", req.body.param);
   res.send(result);
 });
 
-router.get("/api/customers/update", async (req, res) => {
+router.put("/api/customers/update", async (req, res) => {
   const result = await mysql.query("customerUpdate", req.body.param);
   res.send(result);
 });
