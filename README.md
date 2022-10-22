@@ -1,4 +1,5 @@
-# express_skeleton_html
-Express generator with pure HTML
+# express_database_mysql
 
-이 프로젝트에서부터 시작하세요
+
+MYSQL 연동 실습
+
