@@ -1,0 +1,8 @@
+const express = require("express");
+const router = express.Router();
+
+router.get("/api/customers", async (req, res) => {
+  const customers = await mysql.query("customerList");
+  console.log(customers);
+  res.send(customers);
+});
