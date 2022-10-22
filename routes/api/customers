@@ -7,12 +7,18 @@ router.get("/api/customers", async (req, res) => {
   res.send(customers);
 });
 
-router.get("/api/customers/insert", async (req, res) => {
+router.post("/api/customers/insert", async (req, res) => {
   const result = await mysql.query("customerInsert", req.body.param);
   res.send(result);
 });
 
-router.get("/api/customers/update", async (req, res) => {
+router.put("/api/customers/update", async (req, res) => {
   const result = await mysql.query("customerUpdate", req.body.param);
+  res.send(result);
+});
+
+router.delete("api/customers/delete/:id", async (req, res) => {
+  const { id } = req.params; // 경로 상 id에 mapping 되는 값
+  const result = await mysql.query("customerDelete", id);
   res.send(result);
 });
