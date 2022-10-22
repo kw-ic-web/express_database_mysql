@@ -8,11 +8,11 @@ router.get("/api/customers", async (req, res) => {
 });
 
 router.get("/api/customers/insert", async (req, res) => {
-  const customers = await mysql.query("customerInsert", req.body.param);
-  res.send(customers);
+  const result = await mysql.query("customerInsert", req.body.param);
+  res.send(result);
 });
 
 router.get("/api/customers/update", async (req, res) => {
-  const customers = await mysql.query("customerUpdate", req.body.param);
+  const result = await mysql.query("customerUpdate", req.body.param);
   res.send(result);
 });
