@@ -1,4 +1,5 @@
-# express_skeleton_html
-Express generator with pure HTML
+# Express with MySQL
 
-이 프로젝트에서부터 시작하세요
+## SQL 을 활용하여 node.js 에서 MYSQL 을 조작하는 방법을 다룹니다.
+
+
